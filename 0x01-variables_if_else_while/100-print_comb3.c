@@ -1,34 +1,28 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 
 /**
- *main - prints all possible different combinations of two digits
+ * main - Entry point
  *
- *Return: 0
- **/
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-        int ch;
-        int n;
+	int d;
 
-        for (ch = 48; ch <= 57; ch++)
-        {
-        for (n = 49; n <= 57; n++)
-        {
-        if (n > ch)
-        {
-        putchar(ch);
-        putchar(n);
-        if (ch != 56 || n != 57)
-        {
-        putchar(44);
-        putchar(32);
-        }
-        }
-        }
-        }
+	for (d = 0; d < 100; d++)
+	{
+		putchar((d / 10) + '0');
+		putchar((d % 10) + '0');
+		if (d != 99)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 
-        putchar(10);
-        return (0);
+	return (0);
 }
