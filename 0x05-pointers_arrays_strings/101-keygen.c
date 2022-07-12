@@ -33,4 +33,6 @@ putchar(c);
 }
 putchar(sum);
 
+return (0);
+
 }
